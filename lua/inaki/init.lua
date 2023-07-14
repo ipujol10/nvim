@@ -1,1 +1,1 @@
-print("hello inaki")
+require("inaki.remap")
