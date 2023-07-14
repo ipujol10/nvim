@@ -1,1 +1,2 @@
+require("inaki")
 print("hello")
