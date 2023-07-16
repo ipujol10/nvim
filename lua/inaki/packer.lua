@@ -72,6 +72,5 @@ return require('packer').startup(function(use)
     use("folke/zen-mode.nvim")
     --  use("github/copilot.vim") -- Needs subscription
     use("laytan/cloak.nvim")
-    use('m4xshen/autoclose.nvim')
 
 end)
