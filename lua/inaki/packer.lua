@@ -73,6 +73,6 @@ return require('packer').startup(function(use)
     --  use("github/copilot.vim") -- Needs subscription
     use("laytan/cloak.nvim")
     use("tpope/vim-surround")
-    use("neoclide/coc.nvim")
+    use {'neoclide/coc.nvim', branch = 'release'}
 
 end)
