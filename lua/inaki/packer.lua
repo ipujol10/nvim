@@ -74,5 +74,6 @@ return require('packer').startup(function(use)
     use("laytan/cloak.nvim")
     use("tpope/vim-surround")
     use {'neoclide/coc.nvim', branch = 'release'}
-
+    use{'mfussenegger/nvim-dap'}
+    use('Civitasv/cmake-tools.nvim')
 end)

@@ -47,3 +47,33 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- Debug
+vim.keymap.set({ "n", "t" }, "<A-o>",function() require "dap".step_out() end,
+    { silent = true, desc = "step out" })
+vim.keymap.set({ "n", "t" }, "<A-i>", function() require "dap".step_into() end,
+    { silent = true, desc = "step into" })
+vim.keymap.set({ "n", "t" }, "<A-j>", function() require "dap".step_over() end,
+    { silent = true, desc = "step over" })
+vim.keymap.set({ "n", "t" }, "<A-h>", function() require "dap".continue() end,
+    { silent = true, desc = "continue" })
+vim.keymap.set({ "n", "t" }, "<A-k>", function() require("dap.ui.widgets").hover() end,
+    { silent = true, desc = "caculate expr" })
+vim.keymap.set("n", "<F5>", function() require "dap".toggle_breakpoint() end,
+    { silent = true, desc = "toggle breakpoint" })
+
+-- cmake
+vim.keymap.set("n", "<leader>cg", "<cmd>CMakeGenerate<CR>", { desc = "Generate" })
+vim.keymap.set("n", "<leader>cx", "<cmd>CMakeGenerate!<CR>", { desc = "Clean and generate" })
+vim.keymap.set("n", "<leader>cb", "<cmd>CMakeBuild<CR>", { desc = "Build" })
+vim.keymap.set("n", "<leader>cr", "<cmd>CMakeRun<CR>", { desc = "Run" })
+vim.keymap.set("n", "<leader>cd", "<cmd>CMakeDebug<CR>", { desc = "Debug" })
+vim.keymap.set("n", "<leader>cy", "<cmd>CMakeSelectBuildType<CR>", { desc = "Select Build Type" })
+vim.keymap.set("n", "<leader>ct", "<cmd>CMakeSelectBuildTarget<CR>", { desc = "Select Build Target" })
+vim.keymap.set("n", "<leader>cl", "<cmd>CMakeSelectLaunchTarget<CR>", { desc = "Select Launch Target" })
+vim.keymap.set("n", "<leader>co", "<cmd>CMakeOpen<CR>", { desc = "Open CMake Console" })
+vim.keymap.set("n", "<leader>cc", "<cmd>CMakeClose<CR>", { desc = "Close CMake Console" })
+vim.keymap.set("n", "<leader>ci", "<cmd>CMakeInstall<CR>", { desc = "Intall CMake target" })
+vim.keymap.set("n", "<leader>cn", "<cmd>CMakeClean<CR>", { desc = "Clean CMake target" })
+vim.keymap.set("n", "<leader>cs", "<cmd>CMakeStop<CR>", { desc = "Stop CMake Process" })
+vim.keymap.set("n", "<leader>cp", "<cmd>cd %:p:h<CR> ", { desc = "Change pwd to current file" })
