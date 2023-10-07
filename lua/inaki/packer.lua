@@ -76,4 +76,5 @@ return require('packer').startup(function(use)
     use {'neoclide/coc.nvim', branch = 'release'}
     use{'mfussenegger/nvim-dap'}
     use('Civitasv/cmake-tools.nvim')
+    use('theHamsta/nvim-dap-virtual-text')
 end)
