@@ -31,3 +31,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.cmd [[autocmd FileType cpp setlocal expandtab tabstop=2 shiftwidth=2]]
