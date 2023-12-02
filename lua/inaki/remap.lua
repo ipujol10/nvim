@@ -77,3 +77,6 @@ vim.keymap.set("n", "<leader>ci", "<cmd>CMakeInstall<CR>", { desc = "Intall CMak
 vim.keymap.set("n", "<leader>cn", "<cmd>CMakeClean<CR>", { desc = "Clean CMake target" })
 vim.keymap.set("n", "<leader>cs", "<cmd>CMakeStop<CR>", { desc = "Stop CMake Process" })
 vim.keymap.set("n", "<leader>cp", "<cmd>cd %:p:h<CR> ", { desc = "Change pwd to current file" })
+
+-- Format python with black
+vim.keymap.set("n", "<leader>blk", ":!black %<CR>", {desc = "Format Python file with black"})
