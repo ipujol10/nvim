@@ -44,8 +44,8 @@ require("cmake-tools").setup {
         opts = {
             name = "Main Terminal",
             prefix_name = "[CMakeTools]: ", -- This must be included and must be unique, otherwise the terminals will not work. Do not use a simple spacebar " ", or any generic name
-            split_direction = "horizontal", -- "horizontal", "vertical"
-            split_size = 11,
+            split_direction = "vertical", -- "horizontal", "vertical"
+            split_size = 100,
 
             -- Window handling
             single_terminal_per_instance = true, -- Single viewport, multiple windows
