@@ -80,3 +80,6 @@ vim.keymap.set("n", "<leader>cp", "<cmd>cd %:p:h<CR> ", { desc = "Change pwd to 
 
 -- Format python with black
 vim.keymap.set("n", "<leader>blk", ":!black %<CR>", {desc = "Format Python file with black"})
+
+-- colcon build with compile_commands.json
+vim.keymap.set("n", "<C-C>", ":!colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --symlink-install && cp build/compile_commands.json .<CR>")
