@@ -58,7 +58,7 @@ vim.keymap.set({ "n", "t" }, "<A-j>", function() require "dap".step_over() end,
 vim.keymap.set({ "n", "t" }, "<A-h>", function() require "dap".continue() end,
     { silent = true, desc = "continue" })
 vim.keymap.set({ "n", "t" }, "<A-k>", function() require("dap.ui.widgets").hover() end,
-    { silent = true, desc = "caculate expr" })
+    { silent = true, desc = "calculate expr" })
 vim.keymap.set("n", "<F5>", function() require "dap".toggle_breakpoint() end,
     { silent = true, desc = "toggle breakpoint" })
 
@@ -73,7 +73,7 @@ vim.keymap.set("n", "<leader>ct", "<cmd>CMakeSelectBuildTarget<CR>", { desc = "S
 vim.keymap.set("n", "<leader>cl", "<cmd>CMakeSelectLaunchTarget<CR>", { desc = "Select Launch Target" })
 vim.keymap.set("n", "<leader>co", "<cmd>CMakeOpen<CR>", { desc = "Open CMake Console" })
 vim.keymap.set("n", "<leader>cc", "<cmd>CMakeClose<CR>", { desc = "Close CMake Console" })
-vim.keymap.set("n", "<leader>ci", "<cmd>CMakeInstall<CR>", { desc = "Intall CMake target" })
+vim.keymap.set("n", "<leader>ci", "<cmd>CMakeInstall<CR>", { desc = "Install CMake target" })
 vim.keymap.set("n", "<leader>cn", "<cmd>CMakeClean<CR>", { desc = "Clean CMake target" })
 vim.keymap.set("n", "<leader>cs", "<cmd>CMakeStop<CR>", { desc = "Stop CMake Process" })
 vim.keymap.set("n", "<leader>cp", "<cmd>cd %:p:h<CR> ", { desc = "Change pwd to current file" })
@@ -82,4 +82,4 @@ vim.keymap.set("n", "<leader>cp", "<cmd>cd %:p:h<CR> ", { desc = "Change pwd to 
 vim.keymap.set("n", "<leader>blk", ":!black %<CR>", {desc = "Format Python file with black"})
 
 -- colcon build with compile_commands.json
-vim.keymap.set("n", "<C-C>", ":!colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --symlink-install && cp build/compile_commands.json .<CR>")
+vim.keymap.set("n", "<C-C>", ":!colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --symlink-install && ln -s build/compile_commands.json compile_commands.json <CR>")
